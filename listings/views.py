@@ -26,8 +26,15 @@
 # FILTERING BY CATEGORY
 
 # listings/views.py
-from django.shortcuts import render, get_object_or_404
-from .models import Category, Product
+
+# Django modules
+from django.shortcuts import (
+            render, get_object_or_404, redirect)
+
+# Locals
+from listings.models import Category, Product, Review
+from listings.forms import ReviewForm
+
 
 # Product list
 def product_list(request, category_slug=None):
@@ -53,22 +60,63 @@ def product_list(request, category_slug=None):
         'product/list.html', context)
 
 
-# Product detail
+# # Product detail
+# def product_detail(request, category_slug, product_slug):
+
+#     category = get_object_or_404(
+#     		Category, slug=category_slug)
+#     product = get_object_or_404(
+# 	        Product,
+# 	        category_id = category.id,
+# 	        slug=product_slug
+#     )
+
+#     context = {
+#     	'product':product,
+#     }
+
+#     return render(
+#         request,
+#         'product/detail.html', context
+#     )
+
+# Product detail + review
 def product_detail(request, category_slug, product_slug):
 
     category = get_object_or_404(
-    		Category, slug=category_slug)
+            Category, slug=category_slug)
     product = get_object_or_404(
-	        Product,
-	        category_id = category.id,
-	        slug=product_slug
+            Product,
+            category_id = category.id,
+            slug=product_slug
     )
 
-    context = {
-    	'product':product,
-    }
+    if request.method == 'POST':
 
-    return render(
-        request,
-        'product/detail.html', context
-    )
+        review_form = ReviewForm(request.POST)
+        if review_form.is_valid():
+            cf = review_form.cleaned_data
+            author_name = "Anonymous"
+            Review.objects.create(
+                product = product,
+                author = author_name,
+                rating = cf['rating'],
+                text = cf['text']
+            )
+
+        return redirect(
+                'listings:product_detail',
+                category_slug=category_slug, 
+                product_slug=product_slug)
+    
+    else:
+
+        review_form = ReviewForm()
+        return render(
+            request,
+            'product/detail.html',
+            {
+                'product': product,
+                'review_form': review_form
+            }
+        )

@@ -136,6 +136,20 @@ https://github.com/gurnitha/django-ecom-finesauce
 	modified:   templates/product/detail.html
 	modified:   templates/product/list.html
 
+#### 7.6 Adding complte reviews and ratings
+
+	modified:   db.sqlite3
+	modified:   listings/admin.py
+	new file:   listings/forms.py
+	new file:   listings/migrations/0002_review.py
+	modified:   listings/models.py
+	modified:   listings/views.py
+	modified:   readme.md
+	modified:   templates/base.html
+	modified:   templates/product/detail.html
+	modified:   templates/product/list.html
+
+
 
 
 
