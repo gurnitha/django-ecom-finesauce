@@ -96,9 +96,13 @@ https://github.com/gurnitha/django-ecom-finesauce
 	modified:   readme.md
 
 
+#### 7.2 Creating template for our product list
 
-
-
+	modified:   config/settings.py
+	modified:   readme.md
+	new file:   templates/base.html
+	new file:   templates/product/detail.html
+	new file:   templates/product/list.html
 
 
 
