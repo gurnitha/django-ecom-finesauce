@@ -47,6 +47,8 @@ https://github.com/gurnitha/django-ecom-finesauce
 
 #### 4. Designing listings models: Category and Products models
 
+	>> https://github.com/gurnitha/django-ecom-finesauce/commit/83836dcbf5a7ff532f8a0d2cc59a283879976e12
+
 	BEGIN;
 	--
 	-- Create model Category
@@ -68,7 +70,11 @@ https://github.com/gurnitha/django-ecom-finesauce
 		"price" decimal NOT NULL, 
 		"available" bool NOT NULL, 
 		"category_id" integer NOT NULL REFERENCES "listings_category" ("id") DEFERRABLE INITIALLY DEFERRED);
-		
+
 	CREATE INDEX "listings_product_category_id_5d2fa1ec" ON "listings_product" ("category_id");
 	COMMIT;
 
+#### 5. Registering models and customizing how models are displayed in admin dashboar
+
+	modified:   listings/admin.py
+	modified:   readme.md
