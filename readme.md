@@ -104,7 +104,7 @@ https://github.com/gurnitha/django-ecom-finesauce
 	new file:   templates/product/detail.html
 	new file:   templates/product/list.html
 
-### 7.3 Adding Static files, products, and URL pattern for our view
+#### 7.3 Adding Static files, products, and URL pattern for our view
 
 	modified:   config/urls.py
 	modified:   db.sqlite3
@@ -118,9 +118,13 @@ https://github.com/gurnitha/django-ecom-finesauce
 	modified:   readme.md
 	modified:   templates/base.html
 
+#### 7.4 Filtering by category
 
-
-
+	modified:   listings/models.py
+	modified:   listings/urls.py
+	modified:   listings/views.py
+	modified:   readme.md
+	modified:   templates/product/list.html
 
 
 
