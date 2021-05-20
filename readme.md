@@ -76,20 +76,24 @@ https://github.com/gurnitha/django-ecom-finesauce
 
 #### 5. Registering models and customizing how models are displayed in admin dashboar
 
+	>> https://github.com/gurnitha/django-ecom-finesauce/commit/2d0ddc8d1fb3aefceb2741de770742a572028f75
 	modified:   listings/admin.py
 	modified:   readme.md
 
 #### 6. Setting for Media files
 
+	>> https://github.com/gurnitha/django-ecom-finesauce/commit/ce0d39ba065a6cfca3762216db24b913db62706f
 	modified:   config/settings.py
 	modified:   config/urls.py
 	modified:   readme.md
 
 
+### 7. Displaying our categories and products
 
+#### 7.1 Building our product list view
 
-
-
+	modified:   listings/views.py
+	modified:   readme.md
 
 
 
