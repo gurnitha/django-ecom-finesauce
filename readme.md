@@ -78,3 +78,44 @@ https://github.com/gurnitha/django-ecom-finesauce
 
 	modified:   listings/admin.py
 	modified:   readme.md
+
+#### 6. Setting for Media files
+
+	modified:   config/settings.py
+	modified:   config/urls.py
+	modified:   readme.md
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
