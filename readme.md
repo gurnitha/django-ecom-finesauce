@@ -126,11 +126,15 @@ https://github.com/gurnitha/django-ecom-finesauce
 	modified:   readme.md
 	modified:   templates/product/list.html
 
+#### 7.5 Product detail page
 
-
-
-
-
+	modified:   listings/models.py
+	modified:   listings/urls.py
+	modified:   listings/views.py
+	modified:   readme.md
+	modified:   templates/base.html
+	modified:   templates/product/detail.html
+	modified:   templates/product/list.html
 
 
 

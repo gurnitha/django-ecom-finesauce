@@ -4,13 +4,16 @@
 from django.urls import path
 
 # Locals
-from listings import views
-
+# from listings import views
+from listings.views import product_list, product_detail
 app_name = 'listings'
 
 urlpatterns = [
-    path('', views.product_list, name='product_list'),
+    path('', product_list, name='product_list'),
     path('<slug:category_slug>',
-    			views.product_list, 
+    			product_list, 
     			name='product_list_by_category'),
+    path('<slug:category_slug>/<slug:product_slug>/',
+    			product_detail,
+        		name='product_detail'),
 ]
